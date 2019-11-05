@@ -1,4 +1,5 @@
 var app = angular.module('spaApp',['ngRoute']);
+
 app.config(function($routeProvider) {
   $routeProvider.when('/',
     {
@@ -30,6 +31,12 @@ app.config(function($routeProvider) {
        controller: 'AdamController',
        templateUrl: 'app/views/services.html'
      })
+
+     .when('/test',
+        {
+          controller: 'AdamController',
+          templateUrl: 'app/views/test.html'
+        })
 });
 app.controller('WorksController', function($scope){
   $scope.customerID = 5;
